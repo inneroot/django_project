@@ -21,6 +21,11 @@ python manage.py startapp pages
 #URLS
 create urls.py on pages
 add include pages urls in btre urls.py
-#Add TEMPLATES to settings.py
+# Add TEMPLATES to settings.py
 'DIRS': [os.path.join(BASE_DIR, 'templates')],
 --> create folder templates
+# add layout base template
+base.html {% block content %} {% endblock%}
+
+
+
