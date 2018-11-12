@@ -24,8 +24,18 @@ add include pages urls in btre urls.py
 # Add TEMPLATES to settings.py
 'DIRS': [os.path.join(BASE_DIR, 'templates')],
 --> create folder templates
-# add layout base template
+# Add layout base template
 base.html {% block content %} {% endblock%}
-
+# Add static
+add static folder with img css js 
+python manage.py collectstatic
+#copy boostrap template
+{% load static %}
+href="{% static 'css/all.css' %}
+#create partials dir in templates folder
+_navbar.html
+{% include 'partials/_navbar.html' %}
+#Add link
+<a href="{% url 'index' %}">
 
 
